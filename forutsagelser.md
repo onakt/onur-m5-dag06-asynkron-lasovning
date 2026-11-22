@@ -17,9 +17,9 @@ Regler:
 | 6 |först?<br>6<br>7|först?<br>6<br>7|Ja| |
 | 7 |fel: slut på mjölk<br>städar|fel: slut på mjölk<br>städar|Ja| |
 | 8 |beställer<br>sätter mig<br>bullen klar<br>kaffet klart|beställer<br>sätter mig<br>bullen klar<br>kaffet klart|Ja| |
-| 9 | | | | |
-| 10 | | | | |
-| 11 | | | | |
+| 9 |väntar på båda<br>["kaffe","bulle"]|väntar på båda<br>["kaffe","bulle"]|Ja| |
+| 10 |1<br>6<br>3<br>2<br>4<br>5|1<br>6<br>3<br>2<br>4<br>5|Ja| |
+| 11 |c<br>ab|c<br>ab|Ja| |
 
 ## Tre meningar med egna ord
 
