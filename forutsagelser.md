@@ -13,10 +13,10 @@ Regler:
 | 2 |A<br>C<br>B|A<br>C<br>B|Ja| |
 | 3 |start<br>noll<br>kort<br>lång|start<br>noll<br>kort<br>lång|Ja| |
 | 4 |inuti promise<br>efter<br>then: klart|inuti promise<br>efter<br>then: klart|Ja| |
-| 5 | | | | |
-| 6 | | | | |
-| 7 | | | | |
-| 8 | | | | |
+| 5 |sync<br>promise<br>timeout|sync<br>promise<br>timeout|Ja| |
+| 6 |först?<br>6<br>7|först?<br>6<br>7|Ja| |
+| 7 |fel: slut på mjölk<br>städar|fel: slut på mjölk<br>städar|Ja| |
+| 8 |beställer<br>sätter mig<br>bullen klar<br>kaffet klart|beställer<br>sätter mig<br>bullen klar<br>kaffet klart|Ja| |
 | 9 | | | | |
 | 10 | | | | |
 | 11 | | | | |
