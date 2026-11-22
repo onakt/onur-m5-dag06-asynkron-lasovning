@@ -75,12 +75,12 @@ I `src/egen.ts`: skriv `vanta(ms)` som returnerar en promise som blir klar efter
 
 ## Kontrollista: så vet du att du är klar
 
-- [ ] Du har fyllt i gissning *före* faktisk utskrift för alla elva snuttar.
-- [ ] Du har skrivit en regel för varje snutt du gissade fel på.
-- [ ] Du kan förklara varför en promise-callback körs före en `setTimeout(..., 0)`.
+- [X] Du har fyllt i gissning *före* faktisk utskrift för alla elva snuttar.
+- [X] Du har skrivit en regel för varje snutt du gissade fel på.
+- [X] Du kan förklara varför en promise-callback körs före en `setTimeout(..., 0)`.
 - [ ] Du har fyllt i tidslinjen för snutt 5 och 10.
-- [ ] Du har skrivit de tre meningarna med egna ord.
-- [ ] Du har gjort minst tre commits.
+- [X] Du har skrivit de tre meningarna med egna ord.
+- [X] Du har gjort minst tre commits.
 
 ## Tips om du fastnar
 

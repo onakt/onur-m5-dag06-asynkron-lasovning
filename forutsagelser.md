@@ -23,6 +23,6 @@ Regler:
 
 ## Tre meningar med egna ord
 
-1. JavaScript väntar inte på `setTimeout`, utan ...
-2. En promise har tre tillstånd: ... 
-3. `then` körs alltid ...
+1. JavaScript väntar inte på `setTimeout`, utan ... fortsätter köra resten av koden medan timern räknar ner. När timern når 0, läggs callback-funktionen i task-kön för senare körning (synkron kod först, sedan microtask-kön och sen task-kön).
+2. En promise har tre tillstånd: ... **pending** (Väntar, inget resultat än), **fulfilled** (Lyckades, har ett värde), **rejected** (Misslyckades, har ett fel).
+3. `then` körs alltid ... asynkront via microtask-kön. Det innebär att synkron kod alltid körs först, därefter körs .then()-callbacken när microtask-kön behandlas.
