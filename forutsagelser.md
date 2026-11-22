@@ -9,10 +9,10 @@ Regler:
 
 | Snutt | Min gissning (i ordning) | Faktisk utskrift | Rätt? | Min regel om jag hade fel |
 |---|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
+| 1 |1: Beställer kaffe<br>2: Läser tidningen<br>3: Kaffet är klart|1: Beställer kaffe<br>2: Läser tidningen<br>3: Kaffet är klart|Ja| |
+| 2 |A<br>C<br>B|A<br>C<br>B|Ja| |
+| 3 |start<br>noll<br>kort<br>lång|start<br>noll<br>kort<br>lång|Ja| |
+| 4 |inuti promise<br>efter<br>then: klart|inuti promise<br>efter<br>then: klart|Ja| |
 | 5 | | | | |
 | 6 | | | | |
 | 7 | | | | |
