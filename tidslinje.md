@@ -13,26 +13,27 @@ Förklaring:
 
 | Steg | Vad händer | Stacken | Microtask-kön | Task-kön | Utskrift hittills |
 |---|---|---|---|---|---|
-| 1 | setTimeout anropas | | | | |
-| 2 | Promise.resolve().then(...) anropas | | | | |
-| 3 | console.log("sync") | | | | |
-| 4 | Stacken tom: vad körs först? | | | | |
-| 5 | Nästa | | | | |
+| 1 | setTimeout anropas |setTimeout(...)| |skriv timeout|–|
+| 2 | Promise.resolve().then(...) anropas |Promise (anrop)|skriv promise|skriv timeout|–|
+| 3 | console.log("sync") |skriv sync|skriv promise|skriv timeout|sync|
+| 4 | Stacken tom: vad körs först? |promise först|–|skriv timeout|sync, promise|
+| 5 | Nästa |timeout|–|–|sync, promise, timeout|
 
 ## Snutt 10
 
 | Steg | Vad händer | Stacken | Microtask-kön | Task-kön | Utskrift hittills |
 |---|---|---|---|---|---|
-| 1 | console.log("1") | | | | |
-| 2 | första setTimeout | | | | |
-| 3 | Promise.resolve().then(3) | | | | |
-| 4 | andra setTimeout | | | | |
-| 5 | console.log("6") | | | | |
-| 6 | stacken tom, microtask-kön först | | | | |
-| 7 | första tasken | | | | |
-| 8 | andra tasken | | | | |
-| 9 | microtask 5 | | | | |
+| 1 | console.log("1") |skriv 1|–|–|1|
+| 2 | första setTimeout |setTimeout(...)|–|skriv 2|1|
+| 3 | Promise.resolve().then(3) |Promise|skriv 3|skriv 2|1|
+| 4 | andra setTimeout |setTimeout(...)|skriv 3|skriv 2, 4 + Promise.then("5")|1|
+| 5 | console.log("6") |skriv 6|skriv 3|skriv 2, 4 + Promise.then("5")|1, 6|
+| 6 | stacken tom, microtask-kön först |skriv 3|–|skriv 2, 4 + Promise.then("5")|1, 6, 3|
+| 7 | första tasken |skriv 2|–|skriv 4 + Promise.then("5")|1, 6, 3, 2|
+| 8 | andra tasken |skriv 4, Promise.then("5")|skriv 5|–|1, 6, 3, 2, 4|
+| 9 | microtask 5 |skriv 5|–|–|1, 6, 3, 2, 4, 5|
 
 ## Min förklaring i en mening
 
 Varför kommer en promise-callback före en timer med 0 ms?
+För att promise-callback hamnar i microtask-kön medan timer-callbacks hamnar i task-kön. Regeln är att när stacken är tom så körs först ALLA microtasks, sedan EN task, sedan tomma microtasks igen, och så vidare. Därför kommer promise-callback före en timer, även om den har 0 ms.
